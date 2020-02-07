@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "watch": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/index.ts",
-    "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
-    "build": "tsc",
-    "seed": "ts-node prisma/seed.ts"
+    "start": "node dist/index.js",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
