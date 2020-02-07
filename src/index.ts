@@ -32,6 +32,6 @@ const port = process.env['PORT'] || 8443
 
 app.listen(port, () =>
     console.log(
-        '🚀 Server ready at: http://localhost:8443',
+        `🚀 Server ready at: http://localhost:${port}`,
     ),
 )
