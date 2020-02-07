@@ -1,0 +1,33 @@
+{
+  "name": "falfox-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/index.ts",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "seed": "ts-node prisma/seed.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@line/bot-sdk": "^6.8.4",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "fs-extra": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.1",
+    "@types/cheerio": "^0.22.16",
+    "@types/express": "^4.17.2",
+    "@types/fs-extra": "^8.0.1",
+    "nodemon": "^1.19.4",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  }
+}

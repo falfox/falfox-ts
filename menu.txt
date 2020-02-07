@@ -1,0 +1,8 @@
+Hai, namaku FalFox
+
+Daftar perintah:
+➡  insta - Mencari akun instagram
+➡  lyric - Cari lirik dari lagu
+➡  lyrics - Cari berbagai lagu
+➡  bye - Kick bot
+➡  help - Daftar command
