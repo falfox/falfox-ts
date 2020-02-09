@@ -23,9 +23,9 @@ const commands = {
 }
 
 export const handleEvent = async (event: WebhookEvent) => {
-    if (event.source.userId !== 'U29b9243b94f06951a52179b0aed5e34a') {
-        return
-    }
+    // if (event.source.userId !== 'U29b9243b94f06951a52179b0aed5e34a') {
+    //     return
+    // }
     switch (event.type) {
         case 'message':
             const message = event.message
