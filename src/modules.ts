@@ -128,10 +128,3 @@ export const getAzlyric = async (url: string): Promise<LyricResult> => {
         throw new Error("Lyrics not found")
     }
 };
-// (async () => {
-//     const songs = await searchAzlyric("toothbrush")
-//     if (songs.length > 0) {
-//         const song = await getAzlyric(songs[0].url)
-        
-//     }
-// })()
