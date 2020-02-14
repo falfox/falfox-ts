@@ -7,7 +7,8 @@ export const getInstagram = async (username: string) => {
         headers: {
             'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36',
         },
-        responseType: 'text'
+        responseType: 'text',
+        validateStatus: status => status < 500; // Reject only if the status code is greater than or equal to 500
     })
 
     if (response.status != 404) {
