@@ -21,7 +21,7 @@ export const getInstagram = async (username: string) => {
             throw new Error("Failed to fetch user data")
         }
     } else {
-        throw new Error("Username not found")
+        return null
     }
 }
 
