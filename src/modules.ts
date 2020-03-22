@@ -59,17 +59,18 @@ export const searchAzlyric = async (keyword: string): Promise<SongResult[]> => {
         const html = response.data;
         const $ = cheerio.load(html)
 
-        let selectedTable;
-        const tables = $('.table.table-condensed')
-        if (tables.length <= 0) {
+        let selectedPanel;
+        const panels = $('.panel')
+        console.log(panels.length)
+        if (panels.length <= 0) {
             return []
         } else {
-            for (const table of tables.toArray()) {
-                if (RegExp(/song results/i).test($(table).text())) {
-                    selectedTable = table
+            for (const panel of panels.toArray()) {
+                if (RegExp(/song results/i).test($(panel).text())) {
+                    selectedPanel = panel
                 }
             }
-            const songResults = $(selectedTable).find('tr td.visitedlyr').slice(0, 10)
+            const songResults = $(selectedPanel).find('.table.table-condensed tr td.visitedlyr').slice(0, 10)
 
             const results: SongResult[] = []
             songResults.map((i, song) => {

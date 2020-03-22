@@ -124,7 +124,7 @@ const handleText = async (event: MessageEvent): Promise<Message | Message[] | nu
     if ((m = text.match(commands.insta))) {
         const user: any = await getInstagram(m[2])
 
-        if (!user)  return {
+        if (!user) return {
             type: "text",
             text: `Username ${m[2]} tidak ditemukan`
         }
