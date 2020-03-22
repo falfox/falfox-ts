@@ -118,7 +118,7 @@ export const getAzlyric = async (url: string): Promise<LyricResult> => {
 
         const divs = $(body).find('div:not([class])')
         let lyrics = $(divs[0]).text().trim()
-        lyrics = `${artist} - ${title}\n${lyrics}`
+        lyrics = `${artist} - ${title}\n\n${lyrics}`
 
         return {
             artist,
