@@ -178,7 +178,9 @@ const handleText = async (event: MessageEvent): Promise<Message | Message[] | nu
             }
         }
 
-        const { lyrics } = await getAzlyric(songs[0].url)
+        const [song] = songs
+
+        const { lyrics } = await getAzlyric(song.url)
 
         return splitLyric(lyrics).map((lyric) => ({
             type: "text",
